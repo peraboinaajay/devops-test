@@ -56,4 +56,67 @@ commit tags provide an alias for commit id
   # git tag --a <annotation> --m <massege>
 To view all tags 
   # git tag
+Adding a tag to one of the previous commits
+ # git tag --a <annotation><commit id> --m <message>
+commit id can be viewed in git logs
+all these tags can be viewed in git 
+  # git show <tagname>
 
+
+
+REMOTE
+To add remote repository to local use git add remote followed by remote link
+  # git add remote origin <remotename>
+To push local repository to remote repository
+  # git push origin master
+Tags can be pushed ,viewed and shared on remote
+  # git push origin -- tags
+
+To list all the remotes attached to your local repository
+  # git remote -v
+
+Fetch command copies the changes from remote to the local repository 
+  # git fetch origin 
+fetch does not affect the pressent working directory
+
+Pull copies all the changes from remote to the local repository
+It then merges the changes with the present working directory
+  # git pull origin
+
+
+
+             BRANCHING AND MERGING
+
+To create a new branch from your current branch
+  # git branch <branchname>
+You can switch to your new branch 
+  # git switch <branchname>
+   (or)  # git checkout <branvh name>
+branch command lists all the branches and also points to the current working branch
+   #  git branch
+different modified branches can be merged together using mege
+  # git merge <branchname>
+The branch mentioned is merged into the current branch
+Merged branches can be deleted using the -d flag
+  # git branch -d <branch name>
+Unmerged branches can be deleted using the -D flag
+  # git branch -D <branch name>
+
+         MERGE CONFLICT
+
+merge conflict arises on merging branches
+Set a default merge tool before resolving cnflict
+  # git config --global merge.tool <toolname>
+Merge tool automatically detects the conflicts and displays them
+  # git mergetool
+commit the resolved changes 
+merge the branch again
+
+
+       STASHING, REBASING, REVERTING AND RESETTING
+
+To create a stash of your current working directory
+   # git stash save "message"
+To list all the saved stashes
+  # git stash list
+stash list uses a stack structure to save the list
