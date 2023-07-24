@@ -1,4 +1,4 @@
-In git ,local rpositry it contains two stages staging,local repository
+###In git ,local rpositry it contains two stages staging,local repository
 
   To add the file to the staging area
      # git add <file name>
@@ -8,15 +8,17 @@ To commiting changes to local repository after complited of git add
   # git commit
 
 
-TRACKING CHANGES:
+####TRACKING CHANGES:
 To displayed all the changes made to the tracked files
    # git diff
 
-STAGING AND COMMITING MULTIPLE FILES:
+####STAGING AND COMMITING MULTIPLE FILES:
+
 To commit the changes in staging area it contains many files then use the flag -a to commit all the files
   # git commit -a -m "message"
 
-Removing the files from local repository:
+      #####Removing the files from local repository:
+
 To remove a file from local repository as well as system 
    # git rm <filename>
 To remove the file from git local repository but not from system 
@@ -24,29 +26,29 @@ To remove the file from git local repository but not from system
 To remove a file from staging area by using -f flag
   # git rm -f <filename>
 
-Ignoring files:
+####Ignoring files:
 if a file not git to track than create a file 
  # .gitignore
 in that you should be mention the files
 Alternatively you can also download the .gitignore file from github
 
 
-logs
+####logs
  To show the commit id and its message
    # git log
 
-To add remote repository to local user git add
+##### To add remote repository to local user git add
   # git add remote origin <remote link> 
   # git remote add origin <remote link>
 To push local repository to remote repository 
  # git push origin master
 
-set up a username for your repository
+####set up a username for your repository
   # git config --global user.name "username"
 Set up user-email for your repository
   # git config --global user.email "usermail"
 
-Select or create the directory whereyou want to initialize git
+####Select or create the directory whereyou want to initialize git
 initialize git in the directory 
  # git init
  git amend:
@@ -64,7 +66,8 @@ all these tags can be viewed in git
 
 
 
-REMOTE
+#####REMOTE
+
 To add remote repository to local use git add remote followed by remote link
   # git add remote origin <remotename>
 To push local repository to remote repository
@@ -85,7 +88,7 @@ It then merges the changes with the present working directory
 
 
 
-             BRANCHING AND MERGING
+             ####BRANCHING AND MERGING
 
 To create a new branch from your current branch
   # git branch <branchname>
@@ -102,7 +105,7 @@ Merged branches can be deleted using the -d flag
 Unmerged branches can be deleted using the -D flag
   # git branch -D <branch name>
 
-         MERGE CONFLICT
+         ####MERGE CONFLICT
 
 merge conflict arises on merging branches
 Set a default merge tool before resolving cnflict
@@ -113,7 +116,7 @@ commit the resolved changes
 merge the branch again
 
 
-       STASHING, REBASING, REVERTING AND RESETTING
+       ####STASHING, REBASING, REVERTING AND RESETTING
 
 To create a stash of your current working directory
    # git stash save "message"
@@ -130,7 +133,7 @@ stashes can be deleted from the stash list
 The entair stash stack can be deleted using one command
     # git stash clear
 
-       REBASING
+       ####REBASING
 
 To rebase a branch 
    # git rebase <rebase branch>
@@ -138,7 +141,7 @@ Rever or undo the changes made in the previous commit
   # git revert <commit id>
 old commit still resides in the history
 
-       RESET
+       ####RESET
 
 Reset command can be use to undo changes at different levels
 Modifiers like
