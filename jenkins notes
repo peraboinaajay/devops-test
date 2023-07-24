@@ -1,0 +1,30 @@
+Jenkins 
+ It have master and slave 
+ Preqeuaried tools
+   install git
+   install jdk
+   intall maven it is for java application
+
+
+configaration 
+         ssh based authentication
+         key pair -private and public key
+Create a user
+   # useradd -m -s /bin/bash <username>
+switch to that user
+ # su - <username>
+Genarete the ssh key
+  # ssh-keygen
+Now you do ls -a it give the .ssh directory go to that
+you can see following two file
+    id_rsa  =====> it is private key
+    id_rsa.pub ====> it is the public key
+To show the file
+   # cat id_rsa
+ copy the private key and past it into jenkins node config, enter private key directly then
+Create a file with that
+   # cat id_rsa.pub > authorized_keys
+change the permitions to that file
+  # chown -R <username> /home/<username>/.ssh
+  # chmod 600 /home/<username>/.ssh/authorized.keys
+  # chmod 700 /home/<username>/.ssh
