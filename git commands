@@ -120,3 +120,27 @@ To create a stash of your current working directory
 To list all the saved stashes
   # git stash list
 stash list uses a stack structure to save the list
+saved stashes can be applied at any time on any branch
+  # git stash apply <stash id>
+after applying a stash it can still be  accessed else where because it remain in the stash
+Pop command can be used to apply the most recent stash and removing it from the stash stack
+  # git stash pop 
+stashes can be deleted from the stash list
+  # git stash drop <stashid>
+The entair stash stack can be deleted using one command
+    # git stash clear
+
+       REBASING
+
+To rebase a branch 
+   # git rebase <rebase branch>
+Rever or undo the changes made in the previous commit
+  # git revert <commit id>
+old commit still resides in the history
+
+       RESET
+
+Reset command can be use to undo changes at different levels
+Modifiers like
+   -- hard, --soft and --mixed can be used to decide the degree to which to reset
+ # git reset <modifier> <commitid>
